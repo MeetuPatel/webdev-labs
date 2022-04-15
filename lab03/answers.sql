@@ -104,5 +104,6 @@ WHERE id = 26;
 SELECT posts.id, posts.user_id, count(comments.id) as "count", posts.caption
 FROM POSTS
 INNER JOIN comments ON comments.post_id = posts.id
-WHERE posts.user_id = 26 Group BY(posts.id)
+WHERE posts.user_id = 26 
+GROUP BY(posts.id)
 ORDER BY "count" DESC;
